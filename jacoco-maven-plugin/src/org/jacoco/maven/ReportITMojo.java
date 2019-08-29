@@ -19,6 +19,7 @@ import java.util.Locale;
 import org.apache.maven.plugins.annotations.LifecyclePhase;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
+import org.jacoco.core.diffhelper.DiffHelper;
 import org.jacoco.report.IReportGroupVisitor;
 
 /**
@@ -43,7 +44,11 @@ public class ReportITMojo extends AbstractReportMojo {
 	 */
 	@Parameter(defaultValue = "${project.reporting.outputDirectory}/jacoco-it")
 	private File outputDirectory;
-
+	/**
+	 是否传入difffile，得到增量覆盖率
+	 */
+	@Parameter(property = "jacoco.diffFile", defaultValue = "initvalue")
+	private String diffFile;
 	/**
 	 * File with execution data.
 	 */
@@ -62,6 +67,13 @@ public class ReportITMojo extends AbstractReportMojo {
 
 	@Override
 	void loadExecutionData(final ReportSupport support) throws IOException {
+		if((!diffFile.equals("initvalue"))&&(!diffFile.equals(""))) {
+			try {
+				DiffHelper.modify("diffFilePath",diffFile);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
 		support.loadExecutionData(dataFile);
 	}
 

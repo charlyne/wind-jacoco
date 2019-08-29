@@ -17,6 +17,8 @@ import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.FieldVisitor;
 import org.objectweb.asm.MethodVisitor;
 
+import java.util.ArrayList;
+
 /**
  * Adapter that instruments a class for coverage tracing.
  */
@@ -55,10 +57,9 @@ public class ClassInstrumenter extends ClassProbesVisitor {
 		InstrSupport.assertNotInstrumented(name, className);
 		return super.visitField(access, name, desc, signature, value);
 	}
-
 	@Override
 	public MethodProbesVisitor visitMethod(final int access, final String name,
-			final String desc, final String signature, final String[] exceptions) {
+										   final String desc, final String signature, final String[] exceptions) {
 
 		InstrSupport.assertNotInstrumented(name, className);
 
@@ -74,6 +75,7 @@ public class ClassInstrumenter extends ClassProbesVisitor {
 		return new MethodInstrumenter(probeVariableInserter,
 				probeVariableInserter);
 	}
+
 
 	@Override
 	public void visitTotalProbeCount(final int count) {

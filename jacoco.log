@@ -1,0 +1,244 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.jacoco:org.jacoco.core:jar:1.0.1-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT (/Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml) points at org.jacoco:root instead of com.xiaoju:base-pom, please verify your project structure @ org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT, /Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml, line 15, column 11
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.jacoco:org.jacoco.report:jar:1.0.1-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT (/Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml) points at org.jacoco:root instead of com.xiaoju:base-pom, please verify your project structure @ org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT, /Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml, line 15, column 11
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.jacoco:org.jacoco.agent.rt:jar:1.0.1-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT (/Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml) points at org.jacoco:root instead of com.xiaoju:base-pom, please verify your project structure @ org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT, /Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml, line 15, column 11
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.jacoco:org.jacoco.agent:jar:1.0.1-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT (/Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml) points at org.jacoco:root instead of com.xiaoju:base-pom, please verify your project structure @ org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT, /Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml, line 15, column 11
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.jacoco:org.jacoco.ant:jar:1.0.1-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT (/Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml) points at org.jacoco:root instead of com.xiaoju:base-pom, please verify your project structure @ org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT, /Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml, line 15, column 11
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.jacoco:org.jacoco.cli:jar:1.0.1-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT (/Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml) points at org.jacoco:root instead of com.xiaoju:base-pom, please verify your project structure @ org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT, /Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml, line 15, column 11
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.jacoco:org.jacoco.examples:jar:1.0.1-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT (/Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml) points at org.jacoco:root instead of com.xiaoju:base-pom, please verify your project structure @ org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT, /Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml, line 15, column 11
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.jacoco:jacoco-maven-plugin:maven-plugin:1.0.1-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT (/Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml) points at org.jacoco:root instead of com.xiaoju:base-pom, please verify your project structure @ org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT, /Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml, line 15, column 11
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.jacoco:org.jacoco.core.test:jar:1.0.1-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT (/Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml) points at org.jacoco:root instead of com.xiaoju:base-pom, please verify your project structure @ org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT, /Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml, line 15, column 11
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.jacoco:org.jacoco.core.test.validation.java5:jar:1.0.1-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT (/Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml) points at org.jacoco:root instead of com.xiaoju:base-pom, please verify your project structure @ org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT, /Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml, line 15, column 11
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.jacoco:org.jacoco.core.test.validation.kotlin:jar:1.0.1-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT (/Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml) points at org.jacoco:root instead of com.xiaoju:base-pom, please verify your project structure @ org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT, /Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml, line 15, column 11
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.jacoco:org.jacoco.core.test.validation.java7:jar:1.0.1-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT (/Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml) points at org.jacoco:root instead of com.xiaoju:base-pom, please verify your project structure @ org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT, /Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml, line 15, column 11
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.jacoco:org.jacoco.core.test.validation.java8:jar:1.0.1-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT (/Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml) points at org.jacoco:root instead of com.xiaoju:base-pom, please verify your project structure @ org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT, /Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml, line 15, column 11
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.jacoco:org.jacoco.core.test.validation.groovy:jar:1.0.1-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT (/Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml) points at org.jacoco:root instead of com.xiaoju:base-pom, please verify your project structure @ org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT, /Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml, line 15, column 11
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.jacoco:org.jacoco.core.test.validation.scala:jar:1.0.1-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT (/Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml) points at org.jacoco:root instead of com.xiaoju:base-pom, please verify your project structure @ org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT, /Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml, line 15, column 11
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.jacoco:org.jacoco.core.test.validation:pom:1.0.1-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT (/Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml) points at org.jacoco:root instead of com.xiaoju:base-pom, please verify your project structure @ org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT, /Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml, line 15, column 11
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.jacoco:org.jacoco.report.test:jar:1.0.1-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT (/Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml) points at org.jacoco:root instead of com.xiaoju:base-pom, please verify your project structure @ org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT, /Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml, line 15, column 11
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.jacoco:org.jacoco.agent.rt.test:jar:1.0.1-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT (/Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml) points at org.jacoco:root instead of com.xiaoju:base-pom, please verify your project structure @ org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT, /Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml, line 15, column 11
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.jacoco:org.jacoco.agent.test:jar:1.0.1-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT (/Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml) points at org.jacoco:root instead of com.xiaoju:base-pom, please verify your project structure @ org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT, /Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml, line 15, column 11
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.jacoco:org.jacoco.ant.test:jar:1.0.1-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT (/Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml) points at org.jacoco:root instead of com.xiaoju:base-pom, please verify your project structure @ org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT, /Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml, line 15, column 11
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.jacoco:org.jacoco.cli.test:jar:1.0.1-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT (/Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml) points at org.jacoco:root instead of com.xiaoju:base-pom, please verify your project structure @ org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT, /Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml, line 15, column 11
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.jacoco:org.jacoco.examples.test:jar:1.0.1-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT (/Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml) points at org.jacoco:root instead of com.xiaoju:base-pom, please verify your project structure @ org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT, /Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml, line 15, column 11
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.jacoco:jacoco-maven-plugin.test:jar:1.0.1-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT (/Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml) points at org.jacoco:root instead of com.xiaoju:base-pom, please verify your project structure @ org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT, /Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml, line 15, column 11
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.jacoco:org.jacoco.tests:pom:1.0.1-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT (/Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml) points at org.jacoco:root instead of com.xiaoju:base-pom, please verify your project structure @ org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT, /Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml, line 15, column 11
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.jacoco:org.jacoco.doc:jar:1.0.1-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT (/Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml) points at org.jacoco:root instead of com.xiaoju:base-pom, please verify your project structure @ org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT, /Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml, line 15, column 11
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.jacoco:jacoco:pom:1.0.1-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT (/Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml) points at org.jacoco:root instead of com.xiaoju:base-pom, please verify your project structure @ org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT, /Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml, line 15, column 11
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.jacoco:org.jacoco.build:pom:1.0.1-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM org.jacoco:org.jacoco.build:1.0.1-SNAPSHOT (/Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml) points at org.jacoco:root instead of com.xiaoju:base-pom, please verify your project structure @ line 15, column 11
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] JaCoCo
+[INFO] JaCoCo :: Core
+[INFO] JaCoCo :: Report
+[INFO] JaCoCo :: Agent RT
+[INFO] JaCoCo :: Agent
+[INFO] JaCoCo :: Ant
+[INFO] JaCoCo :: Command Line Interface
+[INFO] JaCoCo :: Examples
+[INFO] JaCoCo :: Maven Plugin
+[INFO] JaCoCo :: Tests
+[INFO] JaCoCo :: Test :: Core
+[INFO] JaCoCo :: Test :: Core :: Validation
+[INFO] JaCoCo :: Test :: Core :: Validation Java 5
+[INFO] JaCoCo :: Test :: Core :: Validation Kotlin
+[INFO] JaCoCo :: Test :: Core :: Validation Java 7
+[INFO] JaCoCo :: Test :: Core :: Validation Java 8
+[INFO] JaCoCo :: Test :: Core :: Validation Groovy
+[INFO] JaCoCo :: Test :: Core :: Validation Scala
+[INFO] JaCoCo :: Test :: Report
+[INFO] JaCoCo :: Test :: Agent RT
+[INFO] JaCoCo :: Test :: Agent
+[INFO] JaCoCo :: Test :: Ant
+[INFO] JaCoCo :: Test :: Command Line Interface
+[INFO] JaCoCo :: Test :: Examples
+[INFO] JaCoCo :: Test :: Maven Plugin
+[INFO] JaCoCo :: Documentation
+[INFO] JaCoCo :: Distribution
+[INFO] root
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building JaCoCo 1.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M2:enforce (enforce) @ org.jacoco.build ---
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.6:run (check-license-header) @ org.jacoco.build ---
+[INFO] Executing tasks
+
+main:
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.5:parse-version (parse-version) @ org.jacoco.build ---
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:1.2:create (default) @ org.jacoco.build ---
+[INFO] Checking for local modifications: skipped.
+[INFO] Updating project files from SCM: skipped.
+[INFO] Executing: /bin/sh -c cd /Users/didi/IdeaProjects/new/jacoco/org.jacoco.build && git rev-parse --verify HEAD
+[INFO] Working directory: /Users/didi/IdeaProjects/new/jacoco/org.jacoco.build
+[INFO] Storing buildNumber: 6be65643ccd83d9cb5f87274a192c8296cda8d7f at timestamp: 1562326072169
+[INFO] Executing: /bin/sh -c cd /Users/didi/IdeaProjects/new/jacoco/org.jacoco.build && git rev-parse --verify HEAD
+[INFO] Working directory: /Users/didi/IdeaProjects/new/jacoco/org.jacoco.build
+[INFO] Storing buildScmBranch: UNKNOWN
+[INFO] 
+[INFO] --- beanshell-maven-plugin:1.4:run (parse-version) @ org.jacoco.build ---
+[INFO] Executing Script
+[INFO] file class java.lang.Object
+[INFO] script class java.lang.String
+[INFO] evaluating script major = project.getProperties().get("parsedVersion.majorVersion"); [+ 17 omitted line(s)]
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @ org.jacoco.build ---
+[INFO] Installing /Users/didi/IdeaProjects/new/jacoco/org.jacoco.build/pom.xml to /Users/didi/.m2/repository/org/jacoco/org.jacoco.build/1.0.1-SNAPSHOT/org.jacoco.build-1.0.1-SNAPSHOT.pom
+[INFO] 
+[INFO] --- maven-deploy-plugin:2.8.2:deploy (default-deploy) @ org.jacoco.build ---
+Downloading: http://artifactory.intra.xiaojukeji.com:80/artifactory/libs-snapshot/org/jacoco/org.jacoco.build/1.0.1-SNAPSHOT/maven-metadata.xml
+603/603 B               Downloaded: http://artifactory.intra.xiaojukeji.com:80/artifactory/libs-snapshot/org/jacoco/org.jacoco.build/1.0.1-SNAPSHOT/maven-metadata.xml (603 B at 0.1 KB/sec)
+Uploading: http://artifactory.intra.xiaojukeji.com:80/artifactory/libs-snapshot/org/jacoco/org.jacoco.build/1.0.1-SNAPSHOT/org.jacoco.build-1.0.1-20190705.112801-4.pom
+2/38 KB     4/38 KB   6/38 KB   8/38 KB   10/38 KB   12/38 KB   14/38 KB   16/38 KB   18/38 KB   20/38 KB   22/38 KB   24/38 KB   26/38 KB   28/38 KB   30/38 KB   32/38 KB   34/38 KB   36/38 KB   38/38 KB              Uploaded: http://artifactory.intra.xiaojukeji.com:80/artifactory/libs-snapshot/org/jacoco/org.jacoco.build/1.0.1-SNAPSHOT/org.jacoco.build-1.0.1-20190705.112801-4.pom (38 KB at 71.1 KB/sec)
+Downloading: http://artifactory.intra.xiaojukeji.com:80/artifactory/libs-snapshot/org/jacoco/org.jacoco.build/maven-metadata.xml
+2/2 KB              Downloaded: http://artifactory.intra.xiaojukeji.com:80/artifactory/libs-snapshot/org/jacoco/org.jacoco.build/maven-metadata.xml (2 KB at 0.2 KB/sec)
+Uploading: http://artifactory.intra.xiaojukeji.com:80/artifactory/libs-snapshot/org/jacoco/org.jacoco.build/1.0.1-SNAPSHOT/maven-metadata.xml
+603/603 B               Uploaded: http://artifactory.intra.xiaojukeji.com:80/artifactory/libs-snapshot/org/jacoco/org.jacoco.build/1.0.1-SNAPSHOT/maven-metadata.xml (603 B at 2.8 KB/sec)
+Uploading: http://artifactory.intra.xiaojukeji.com:80/artifactory/libs-snapshot/org/jacoco/org.jacoco.build/maven-metadata.xml
+2/2 KB               Uploaded: http://artifactory.intra.xiaojukeji.com:80/artifactory/libs-snapshot/org/jacoco/org.jacoco.build/maven-metadata.xml (2 KB at 7.3 KB/sec)
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building JaCoCo :: Core 1.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M2:enforce (enforce) @ org.jacoco.core ---
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.6:run (check-license-header) @ org.jacoco.core ---
+[INFO] Executing tasks
+
+main:
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.5:parse-version (parse-version) @ org.jacoco.core ---
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:1.2:create (default) @ org.jacoco.core ---
+[INFO] 
+[INFO] --- beanshell-maven-plugin:1.4:run (parse-version) @ org.jacoco.core ---
+[INFO] Executing Script
+[INFO] file class java.lang.Object
+[INFO] script class java.lang.String
+[INFO] evaluating script major = project.getProperties().get("parsedVersion.majorVersion"); [+ 17 omitted line(s)]
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ org.jacoco.core ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] Copying 1 resource
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ org.jacoco.core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 122 source files to /Users/didi/IdeaProjects/new/jacoco/org.jacoco.core/target/classes
+[INFO] /Users/didi/IdeaProjects/new/jacoco/org.jacoco.core/src/org/jacoco/core/internal/flow/ClassProbesAdapter.java: 某些输入文件使用了未经检查或不安全的操作。
+[INFO] /Users/didi/IdeaProjects/new/jacoco/org.jacoco.core/src/org/jacoco/core/internal/flow/ClassProbesAdapter.java: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+[INFO] 
+[INFO] --- maven-bundle-plugin:3.5.1:manifest (default) @ org.jacoco.core ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ org.jacoco.core ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/didi/IdeaProjects/new/jacoco/org.jacoco.core/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ org.jacoco.core ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.9:test (default-test) @ org.jacoco.core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.3.1:jar (default-jar) @ org.jacoco.core ---
+[INFO] Building jar: /Users/didi/IdeaProjects/new/jacoco/org.jacoco.core/target/org.jacoco.core-1.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-javadoc-plugin:3.0.1:jar (attach-javadocs) @ org.jacoco.core ---
+[INFO] Building jar: /Users/didi/IdeaProjects/new/jacoco/org.jacoco.core/target/org.jacoco.core-1.0.1-SNAPSHOT-javadoc.jar
+[INFO] 
+[INFO] --- maven-source-plugin:2.1.2:jar-no-fork (attach-sources) @ org.jacoco.core ---
+[INFO] org already added, skipping
+[INFO] org/jacoco already added, skipping
+[INFO] org/jacoco/core already added, skipping
+[INFO] org/jacoco/core/tools already added, skipping
+[INFO] org/jacoco/core/analysis already added, skipping
+[INFO] org/jacoco/core/runtime already added, skipping
+[INFO] org/jacoco/core/internal already added, skipping
+[INFO] org/jacoco/core/internal/analysis already added, skipping
+[INFO] org/jacoco/core/internal/analysis/filter already added, skipping
+[INFO] org/jacoco/core/internal/data already added, skipping
+[INFO] org/jacoco/core/internal/instr already added, skipping
+[INFO] org/jacoco/core/internal/flow already added, skipping
+[INFO] org/jacoco/core/diffhelper already added, skipping
+[INFO] org/jacoco/core/data already added, skipping
+[INFO] org/jacoco/core/instr already added, skipping
+[INFO] org/jacoco/core/jacoco.properties already added, skipping
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @ org.jacoco.core ---
+[INFO] Installing /Users/didi/IdeaProjects/new/jacoco/org.jacoco.core/target/org.jacoco.core-1.0.1-SNAPSHOT.jar to /Users/didi/.m2/repository/org/jacoco/org.jacoco.core/1.0.1-SNAPSHOT/org.jacoco.core-1.0.1-SNAPSHOT.jar
+[INFO] Installing /Users/didi/IdeaProjects/new/jacoco/org.jacoco.core/pom.xml to /Users/didi/.m2/repository/org/jacoco/org.jacoco.core/1.0.1-SNAPSHOT/org.jacoco.core-1.0.1-SNAPSHOT.pom
+[INFO] Installing /Users/didi/IdeaProjects/new/jacoco/org.jacoco.core/target/org.jacoco.core-1.0.1-SNAPSHOT-javadoc.jar to /Users/didi/.m2/repository/org/jacoco/org.jacoco.core/1.0.1-SNAPSHOT/org.jacoco.core-1.0.1-SNAPSHOT-javadoc.jar
+[INFO] Installing /Users/didi/IdeaProjects/new/jacoco/org.jacoco.core/target/org.jacoco.core-1.0.1-SNAPSHOT-sources.jar to /Users/didi/.m2/repository/org/jacoco/org.jacoco.core/1.0.1-SNAPSHOT/org.jacoco.core-1.0.1-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] --- maven-deploy-plugin:2.8.2:deploy (default-deploy) @ org.jacoco.core ---
+Downloading: http://artifactory.intra.xiaojukeji.com:80/artifactory/libs-snapshot/org/jacoco/org.jacoco.core/1.0.1-SNAPSHOT/maven-metadata.xml

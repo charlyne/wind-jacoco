@@ -13,11 +13,13 @@ package org.jacoco.maven;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 import java.util.Locale;
 
 import org.apache.maven.plugins.annotations.LifecyclePhase;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
+import org.jacoco.core.diffhelper.DiffHelper;
 import org.jacoco.report.IReportGroupVisitor;
 
 /**
@@ -36,6 +38,14 @@ public class ReportMojo extends AbstractReportMojo {
 	 * generation, the output directory configured in the Maven Site Plugin is
 	 * used instead.
 	 */
+
+	/**
+	 是否传入difffile，得到增量覆盖率
+	 */
+	@Parameter(property = "jacoco.diffFile", defaultValue = "initvalue")
+	private String diffFile;
+
+
 	@Parameter(defaultValue = "${project.reporting.outputDirectory}/jacoco")
 	private File outputDirectory;
 
@@ -57,6 +67,13 @@ public class ReportMojo extends AbstractReportMojo {
 
 	@Override
 	void loadExecutionData(final ReportSupport support) throws IOException {
+		if((!diffFile.equals("initvalue"))&&(!diffFile.equals(""))) {
+			try {
+				DiffHelper.modify("diffFilePath",diffFile);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
 		support.loadExecutionData(dataFile);
 	}
 
@@ -70,6 +87,7 @@ public class ReportMojo extends AbstractReportMojo {
 	@Override
 	void createReport(final IReportGroupVisitor visitor,
 			final ReportSupport support) throws IOException {
+
 		support.processProject(visitor, title, getProject(), getIncludes(),
 				getExcludes(), sourceEncoding);
 	}

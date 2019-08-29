@@ -12,9 +12,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
+  <parent>
+    <groupId>com.xiaoju</groupId>
+    <artifactId>base-pom</artifactId>
+    <version>0.0.1</version>
+  </parent>
+
+
   <groupId>org.jacoco</groupId>
   <artifactId>org.jacoco.build</artifactId>
-  <version>0.8.5-SNAPSHOT</version>
+  <version>1.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>JaCoCo</name>
@@ -109,18 +116,6 @@
     <system>GitHub</system>
     <url>https://github.com/jacoco/jacoco/issues</url>
   </issueManagement>
-  <distributionManagement>
-    <repository>
-      <id>sonatype-nexus-staging</id>
-      <name>Nexus Release Repository</name>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-    </repository>
-    <snapshotRepository>
-      <id>sonatype-nexus-snapshots</id>
-      <name>Sonatype Nexus Snapshots</name>
-      <url>${sonatypeOssDistMgmtSnapshotsUrl}</url>
-    </snapshotRepository>
-  </distributionManagement>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -1118,6 +1113,26 @@
         </pluginManagement>
       </build>
     </profile>
+
   </profiles>
+  <distributionManagement>
+    <repository>
+      <id>central</id>
+      <name>plugins-release</name>
+      <url>
+        http://artifactory.intra.xiaojukeji.com:80/artifactory/plugins-release-local
+      </url>
+    </repository>
+    <snapshotRepository>
+      <id>snapshots</id>
+      <name>plugins-snapshot</name>
+      <url>
+        http://artifactory.intra.xiaojukeji.com:80/artifactory/plugins-snapshot-local
+
+      </url>
+    </snapshotRepository>
+
+  </distributionManagement>
+
 
 </project>

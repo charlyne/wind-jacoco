@@ -11,10 +11,13 @@
  *******************************************************************************/
 package org.jacoco.core.internal.flow;
 
+import org.jacoco.core.diffhelper.DiffHelper;
 import org.jacoco.core.internal.instr.InstrSupport;
 import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.commons.AnalyzerAdapter;
+
+import java.util.ArrayList;
 
 /**
  * A {@link org.objectweb.asm.ClassVisitor} that calculates probes for every
@@ -33,6 +36,7 @@ public class ClassProbesAdapter extends ClassVisitor implements
 	private int counter = 0;
 
 	private String name;
+	private ArrayList<String> diffmethodNames;
 
 	/**
 	 * Creates a new adapter that delegates to the given visitor.
@@ -55,6 +59,7 @@ public class ClassProbesAdapter extends ClassVisitor implements
 			final String[] interfaces) {
 		this.name = name;
 		super.visit(version, access, name, signature, superName, interfaces);
+
 	}
 
 	@Override
@@ -63,13 +68,36 @@ public class ClassProbesAdapter extends ClassVisitor implements
 		final MethodProbesVisitor methodProbes;
 		final MethodProbesVisitor mv = cv.visitMethod(access, name, desc,
 				signature, exceptions);
+		DiffHelper helper=new DiffHelper();
+		if(helper.isDiffFileExists()) {
+			//计算增量代码覆盖率
+			//获取class的diffMethod集合
+			diffmethodNames = helper.getDiffMethod(this.name);
+			if (mv != null && diffmethodNames != null && diffmethodNames.contains(name)) {
+				methodProbes = mv;
+			} else {
+				methodProbes = EMPTY_METHOD_PROBES_VISITOR;
+			}
+		}else {
+			//计算全量代码覆盖率
+			if (mv == null) {
+				// We need to visit the method in any case, otherwise probe ids
+				// are not reproducible
+				methodProbes = EMPTY_METHOD_PROBES_VISITOR;
+			} else {
+				methodProbes = mv;
+			}
+		}
+
+
+		/**
 		if (mv == null) {
 			// We need to visit the method in any case, otherwise probe ids
 			// are not reproducible
 			methodProbes = EMPTY_METHOD_PROBES_VISITOR;
 		} else {
 			methodProbes = mv;
-		}
+		}*/
 		return new MethodSanitizer(null, access, name, desc, signature,
 				exceptions) {
 

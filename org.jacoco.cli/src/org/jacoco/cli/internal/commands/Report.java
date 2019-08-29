@@ -26,6 +26,7 @@ import org.jacoco.core.analysis.CoverageBuilder;
 import org.jacoco.core.analysis.IBundleCoverage;
 import org.jacoco.core.analysis.IClassCoverage;
 import org.jacoco.core.data.ExecutionDataStore;
+import org.jacoco.core.diffhelper.DiffHelper;
 import org.jacoco.core.tools.ExecFileLoader;
 import org.jacoco.report.DirectorySourceFileLocator;
 import org.jacoco.report.FileMultiReportOutput;
@@ -44,11 +45,16 @@ import org.kohsuke.args4j.Option;
  */
 public class Report extends Command {
 
-	@Argument(usage = "list of JaCoCo *.exec files to read", metaVar = "<execfiles>")
+
+
+	@Argument(usage = "list of JaCoCo *.exec files to read", metaVar = "<execfiles>" )
 	List<File> execfiles = new ArrayList<File>();
 
 	@Option(name = "--classfiles", usage = "location of Java class files", metaVar = "<path>", required = true)
 	List<File> classfiles = new ArrayList<File>();
+
+	@Option(name = "--diffFile", usage = "input file for diff", metaVar = "<file>")
+	String diffFile;
 
 	@Option(name = "--sourcefiles", usage = "location of the source files", metaVar = "<path>")
 	List<File> sourcefiles = new ArrayList<File>();
@@ -79,6 +85,15 @@ public class Report extends Command {
 	@Override
 	public int execute(final PrintWriter out, final PrintWriter err)
 			throws IOException {
+		try {
+			if(diffFile!=null) {
+				//加塞代码:当load数据的时候,加载DiffHelper
+				DiffHelper.modify("diffFilePath", diffFile);
+				DiffHelper d=new DiffHelper();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		final ExecFileLoader loader = loadExecutionData(out);
 		final IBundleCoverage bundle = analyze(loader.getExecutionDataStore(),
 				out);

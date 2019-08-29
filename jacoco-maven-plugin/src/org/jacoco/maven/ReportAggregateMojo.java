@@ -26,6 +26,7 @@ import org.apache.maven.model.Dependency;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
 import org.apache.maven.project.MavenProject;
+import org.jacoco.core.diffhelper.DiffHelper;
 import org.jacoco.report.IReportGroupVisitor;
 
 /**
@@ -62,6 +63,11 @@ public class ReportAggregateMojo extends AbstractReportMojo {
 	 */
 	@Parameter
 	List<String> dataFileIncludes;
+	/**
+	 是否传入difffile，得到增量覆盖率
+	 */
+	@Parameter(property = "jacoco.diffFile", defaultValue = "initvalue")
+	private String diffFile;
 
 	/**
 	 * A list of execution data files to exclude from the report. May use
@@ -99,6 +105,14 @@ public class ReportAggregateMojo extends AbstractReportMojo {
 
 	@Override
 	void loadExecutionData(final ReportSupport support) throws IOException {
+		if((!diffFile.equals("initvalue"))&&(!diffFile.equals(""))) {
+			//System.out.println("helper=initvalue");
+			try {
+				DiffHelper.modify("diffFilePath",diffFile);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
 		// https://issues.apache.org/jira/browse/MNG-5440
 		if (dataFileIncludes == null) {
 			dataFileIncludes = Arrays.asList("target/*.exec");

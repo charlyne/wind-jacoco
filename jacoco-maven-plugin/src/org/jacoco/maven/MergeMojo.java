@@ -56,7 +56,7 @@ public class MergeMojo extends AbstractJacocoMojo {
 	 * </code>
 	 * </pre>
 	 */
-	@Parameter(required = true)
+	@Parameter(property = "jacoco.fileSets")
 	private List<FileSet> fileSets;
 
 	@Override
@@ -69,6 +69,7 @@ public class MergeMojo extends AbstractJacocoMojo {
 	}
 
 	private boolean canMergeReports() {
+		System.out.println(fileSets);
 		if (fileSets == null || fileSets.isEmpty()) {
 			getLog().info(MSG_SKIPPING);
 			return false;
@@ -78,7 +79,6 @@ public class MergeMojo extends AbstractJacocoMojo {
 
 	private void executeMerge() throws MojoExecutionException {
 		final ExecFileLoader loader = new ExecFileLoader();
-
 		load(loader);
 		save(loader);
 	}

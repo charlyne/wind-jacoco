@@ -1,13 +1,36 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
+
+  <parent>
+    <groupId>com.xiaoju</groupId>
+    <artifactId>base-pom</artifactId>
+    <version>0.0.1</version>
+  </parent>
+
   <groupId>org.jacoco</groupId>
   <artifactId>root</artifactId>
-  <version>0.8.5-SNAPSHOT</version>
+  <version>1.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <modules>
     <module>org.jacoco.build</module>
   </modules>
+  <distributionManagement>
+  <repository>
+    <id>central</id>
+    <name>plugins-release</name>
+    <url>
+      http://artifactory.intra.xiaojukeji.com:80/artifactory/plugins-release-local
+    </url>
+  </repository>
+  <snapshotRepository>
+    <id>snapshots</id>
+    <name>plugins-snapshot</name>
+    <url>
+      http://artifactory.intra.xiaojukeji.com:80/artifactory/plugins-snapshot-local
+    </url>
+  </snapshotRepository>
 
+</distributionManagement>
 </project>
