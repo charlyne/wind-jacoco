@@ -14,6 +14,7 @@ package org.jacoco.core.diffhelper;
 import java.io.*;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
+import java.security.MessageDigest;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Arrays;
@@ -100,18 +101,23 @@ public class DiffHelper {
         }
         return map;
     }
-    //这里因为key和classname的路径可能不一样,所以不能直接map.get(className)
-    // TODO: 2019/8/30 优化一下，如何是add类型，应该直接返回true，不直接调用getDiffMethod 
-    // TODO: 2019/8/30  diffhelper中应该是classname：类型是add直接返回true；、
-    // TODO: 2019/8/30 如果是modify就使用asm解析的class文件，进行比较 
-    public ArrayList getDiffMethod(String className){
+
+    public boolean isDiffMethod(String className,String methodString){
+        String methodSignature=getMD5Value(methodString);
         for(String key:map.keySet()){
             if(key.endsWith(className)){
-                return map.get(key);
-            }else
-                continue;
+                ArrayList<String> methodList=map.get(key);
+                for(int i=0;i<methodList.size();i++){
+                    //true表示此类是新增类，
+                    if(methodList.get(i).equals("true")||methodSignature.equals(methodList.get(i))){
+                        return true;
+                    }
+                }
+
+            }
         }
-        return null;
+        return false;
+
     }
     //修改final变量
 
@@ -127,12 +133,26 @@ public class DiffHelper {
         Field modifiersField = Field.class.getDeclaredField("modifiers");
         modifiersField.setAccessible(true);
         modifiersField.setInt(field, field.getModifiers() & ~Modifier.FINAL);
-
         if(!field.isAccessible()) {
             field.setAccessible(true);
         }
-
         field.set(helper, newFieldValue);
+    }
+    //MD5 加密工具类
+    public static String getMD5Value(String dataStr) {
+        try {
+            MessageDigest m = MessageDigest.getInstance("MD5");
+            m.update(dataStr.getBytes("UTF8"));
+            byte s[] = m.digest();
+            String result = "";
+            for (int i = 0; i < s.length; i++) {
+                result += Integer.toHexString((0x000000FF & s[i]) | 0xFFFFFF00).substring(6);
+            }
+            return result;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "";
     }
 
 }

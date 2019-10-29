@@ -72,8 +72,8 @@ public class ClassProbesAdapter extends ClassVisitor implements
 		if(helper.isDiffFileExists()) {
 			//计算增量代码覆盖率
 			//获取class的diffMethod集合
-			diffmethodNames = helper.getDiffMethod(this.name);
-			if (mv != null && diffmethodNames != null && diffmethodNames.contains(name)) {
+			//diffmethodNames = helper.getDiffMethod(this.name);
+			if (mv != null && helper.isDiffMethod(this.name,name+desc)) {
 				methodProbes = mv;
 			} else {
 				methodProbes = EMPTY_METHOD_PROBES_VISITOR;
@@ -88,7 +88,6 @@ public class ClassProbesAdapter extends ClassVisitor implements
 				methodProbes = mv;
 			}
 		}
-
 
 		/**
 		if (mv == null) {

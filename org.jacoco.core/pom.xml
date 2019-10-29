@@ -66,4 +66,21 @@
       </plugin>
     </plugins>
   </build>
+  <distributionManagement>
+    <repository>
+      <id>central</id>
+      <name>plugins-release</name>
+      <url>
+        http://artifactory.intra.xiaojukeji.com:80/artifactory/plugins-release-local
+      </url>
+    </repository>
+    <snapshotRepository>
+      <id>snapshots</id>
+      <name>plugins-snapshot</name>
+      <url>
+        http://artifactory.intra.xiaojukeji.com:80/artifactory/plugins-snapshot-local
+      </url>
+    </snapshotRepository>
+
+  </distributionManagement>
 </project>
