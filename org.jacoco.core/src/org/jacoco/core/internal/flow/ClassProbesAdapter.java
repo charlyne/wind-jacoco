@@ -70,16 +70,12 @@ public class ClassProbesAdapter extends ClassVisitor implements
 				signature, exceptions);
 		DiffHelper helper=new DiffHelper();
 		if(helper.isDiffFileExists()) {
-			//计算增量代码覆盖率
-			//获取class的diffMethod集合
-			//diffmethodNames = helper.getDiffMethod(this.name);
 			if (mv != null && helper.isDiffMethod(this.name,name+desc)) {
 				methodProbes = mv;
 			} else {
 				methodProbes = EMPTY_METHOD_PROBES_VISITOR;
 			}
 		}else {
-			//计算全量代码覆盖率
 			if (mv == null) {
 				// We need to visit the method in any case, otherwise probe ids
 				// are not reproducible
@@ -88,15 +84,6 @@ public class ClassProbesAdapter extends ClassVisitor implements
 				methodProbes = mv;
 			}
 		}
-
-		/**
-		if (mv == null) {
-			// We need to visit the method in any case, otherwise probe ids
-			// are not reproducible
-			methodProbes = EMPTY_METHOD_PROBES_VISITOR;
-		} else {
-			methodProbes = mv;
-		}*/
 		return new MethodSanitizer(null, access, name, desc, signature,
 				exceptions) {
 
