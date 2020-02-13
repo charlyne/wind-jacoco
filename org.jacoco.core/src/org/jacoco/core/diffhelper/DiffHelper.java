@@ -84,7 +84,7 @@ public class DiffHelper {
             }
             return map;
         } else {
-            //传入的是medthodlist  class的分隔符%，classname1:method1,method2%classname2:method11,method22,method33
+            // 传入的是medthodlist  class的分隔符%，classname1:method1,method2%classname2:method11,method22,method33
             String[] classlist = file.split("%");
             for (int i = 0; i < classlist.length; i++) {
                 String[] tmps = classlist[i].split(":");
