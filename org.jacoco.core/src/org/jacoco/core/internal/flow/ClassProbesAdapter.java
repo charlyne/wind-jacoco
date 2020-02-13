@@ -62,6 +62,8 @@ public class ClassProbesAdapter extends ClassVisitor implements
 
 	}
 
+
+
 	@Override
 	public final MethodVisitor visitMethod(final int access, final String name,
 			final String desc, final String signature, final String[] exceptions) {
