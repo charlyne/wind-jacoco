@@ -72,7 +72,7 @@ public class ClassProbesAdapter extends ClassVisitor implements
 				signature, exceptions);
 		DiffHelper helper=new DiffHelper();
 		if(helper.isDiffFileExists()) {
-			if (mv != null && helper.isDiffMethod(this.name,name+desc)) {
+			if (mv != null && helper.isDiffMethod(this.name,name,desc)) {
 				methodProbes = mv;
 			} else {
 				methodProbes = EMPTY_METHOD_PROBES_VISITOR;

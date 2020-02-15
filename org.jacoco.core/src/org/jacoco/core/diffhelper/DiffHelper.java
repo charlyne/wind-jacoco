@@ -23,102 +23,76 @@ public class DiffHelper {
     //diffreport会反射修改diffFile,diffFilePath可以是文件名或者是diffmethodslist字符串
     private static final String diffFilePath=new String("initvalue");
     //存储class类和对应的diffmethods
-    final private HashMap<String,ArrayList> map;
+    final private HashMap<String,ArrayList> classMethods;
 
     public DiffHelper(){
-            this.map = getMapper(diffFilePath);
+        this.classMethods = getclassMethodsMapper(diffFilePath);
 
     }
 
     public boolean isDiffFileExists(){
         //表面diffFilePath值没有被改变过，或者获取difffile路径为空，所以走的是全量覆盖率
-        if(diffFilePath==null||diffFilePath.equals("initvalue")||diffFilePath.equals("")||map.isEmpty()){
+        if(diffFilePath==null||diffFilePath.equals("initvalue")||diffFilePath.equals("")||classMethods.isEmpty()){
             return false;
         }
         else return true;
 
     }
-    public String getDiffFilePath(){
+    public String getDiffFile(){
         return diffFilePath;
     }
 
-    public static HashMap<String,ArrayList> getMapper(String file) {
-        HashMap<String, ArrayList> map = new HashMap<String, ArrayList>();
-
+    public static HashMap<String,ArrayList> getclassMethodsMapper(String file) {
+        HashMap<String, ArrayList> diffMap = new HashMap<String, ArrayList>();
         if (file==null||file.equals("initvalue")||file.equals("")) {
             //if语句必不可少,不然第一次initvalue执行if外的语句会抛一次异常java.io.FileNotFoundException
-            return map;
+            return diffMap;
         }
-        File filename = new File(diffFilePath);
-        if (filename.exists()) {
-            //传入的是文件名字
-            FileReader fileReader = null;
-            try {
-                fileReader = new FileReader(diffFilePath);
-                BufferedReader in = new BufferedReader(fileReader);
-                String str;
-                while ((str = in.readLine()) != null) {
-                    //这块逻辑为什么写的这么麻烦
-                    String[] tmps = str.split(":");
-                    String classname = tmps[0];
-                    String methodstr = tmps[1];
-                    if (tmps.length == 2) {
-                        ArrayList<String> list = new ArrayList<String>();
-                        list = new ArrayList<String>(Arrays.asList(methodstr.split(",")));
-                        map.put(classname, list);
-                    } else {
-                        return map;
-                    }
-                }
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
-            } finally {
-                if (fileReader != null)
-                    try {
-                        fileReader.close();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-            }
-            return map;
-        } else {
-            // 传入的是medthodlist  class的分隔符%，classname1:method1,method2%classname2:method11,method22,method33
-            String[] classlist = file.split("%");
-            for (int i = 0; i < classlist.length; i++) {
-                String[] tmps = classlist[i].split(":");
-                String classname = tmps[0];
-                String methodstr = tmps[1];
-                if (tmps.length == 2) {
-                    ArrayList<String> list = new ArrayList<String>();
-                    list = new ArrayList<String>(Arrays.asList(methodstr.split(",")));
-                    map.put(classname, list);
-                }
 
-            }
-
+        // 传入的是medthodlist  class的分隔符%，classname1:method1,method2%classname2:method11,method22,method33
+        //传入的是classname1:methodname1,parameter1,parameter2#methodname2%classname2.....
+        String[] classlist = file.split("%");
+        for (int i = 0; i < classlist.length; i++) {
+            String[] tmps = classlist[i].split(":");
+            String classname = tmps[0];
+            String methodstr = tmps[1];
+            ArrayList<String> list = new ArrayList<String>();
+            list = new ArrayList<String>(Arrays.asList(methodstr.split("#")));
+            diffMap.put(classname, list);
         }
-        return map;
+        return diffMap;
     }
-
-    public boolean isDiffMethod(String className,String methodString){
-        String methodSignature=getMD5Value(methodString);
-        for(String key:map.keySet()){
+    public boolean isDiffMethod(String className,String methodName,String methodDesc){
+        for(String key:classMethods.keySet()){
+            // TODO: 2020/2/14 这里endsWith是否有待商榷
             if(key.endsWith(className)){
-                ArrayList<String> methodList=map.get(key);
-                for(int i=0;i<methodList.size();i++){
-                    //true表示此类是新增类，
-                    if(methodList.get(i).equals("true")||methodSignature.equals(methodList.get(i))){
-                        return true;
-                    }
+                ArrayList<String> methodList=classMethods.get(key);
+                if(methodList.get(0).equals("true")){
+                    return true;
                 }
+                //将asm框架对方法的desc提取出来method,param1,param2
+                String[] paramArr=methodDesc.split("\\)")[0].split(";");
+                StringBuilder builder=new StringBuilder(methodName);
+                    for(String param:paramArr){
+                        String[] tt=param.split("/");
+                        if(tt.length>=2){
+                            builder.append(","+tt[tt.length-1]);
+                        }
+                    }
+                    for(String method:methodList){
+                        if(method.equals(builder.toString())){
+                            return true;
+                        }
+                    }
+
+
 
             }
         }
         return false;
-
     }
+
+
     //修改final变量
 
     public static void modify(String fieldName, Object newFieldValue) throws Exception {
