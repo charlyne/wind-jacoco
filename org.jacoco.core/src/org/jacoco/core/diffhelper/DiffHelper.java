@@ -63,6 +63,8 @@ public class DiffHelper {
         for(String key:classMethods.keySet()){
             // TODO: 2020/2/14 这里endsWith是否有待商榷
             if(key.endsWith(className)){
+                System.out.println("classname:"+className);
+                System.out.println("key:"+key);
                 ArrayList<String> methodList=classMethods.get(key);
                 if(methodList.get(0).equals("true")){
                     return true;
